@@ -8,4 +8,8 @@ class Mission < ApplicationRecord
     order(:title)
   end
 
+  def self.space_time
+    sum(:time_in_space)
+  end
+
 end

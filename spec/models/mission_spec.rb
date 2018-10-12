@@ -20,5 +20,13 @@ describe Mission, type: :model do
 
       expect(alpha_sort).to eq([mission_2, mission_1])
     end
+    it 'should show total time in space per one astronaut' do
+      astronaut_1 = Astronaut.create(name: "Nick Lindy", age: 40, job: "Commander")
+      mission_1 = astronaut_1.missions.create(title: "B Moon", time_in_space: 20)
+      mission_2 = astronaut_1.missions.create(title: "A Moon", time_in_space: 30)
+      space_time = Mission.space_time
+
+      expect(space_time).to eq(50)
+    end
   end
 end
