@@ -2,6 +2,9 @@
   <%= a.name %>
   <%= a.age %>
   <%= a.job %>
+  <% a.missions.each do |m| %>
+    <%= m.title.aplha_sort %>
+  <% end %>
 <% end %>
 
 Average Age: <%= @astronauts.avg_age %>
