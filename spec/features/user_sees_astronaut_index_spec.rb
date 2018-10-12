@@ -32,7 +32,6 @@ describe 'user visits astronaut index' do
     visit astronauts_path
 
     expect(page).to have_content("A Moon B Moon")
-    expect(page).to have_content("C Moon D Moon")
-
+    expect(page).to have_content("C Mars D Mars")
   end
 end
